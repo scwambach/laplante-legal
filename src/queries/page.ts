@@ -14,6 +14,7 @@ import { people } from './blocks/people'
 import { quote } from './blocks/quote'
 import { richText } from './blocks/richText'
 import { river } from './blocks/river'
+import { splashBanner } from './blocks/splashBanner'
 import { stats } from './blocks/stats'
 import { tabs } from './blocks/tabs'
 import { timeline } from './blocks/timeline'
@@ -37,11 +38,12 @@ export const PAGE_QUERY = `*[_type == "page" && slug.current == $slug][0] {
     ${gallery},
     ${logoBanner},
     ${logoRow},
-    ${people},
     ${map},
+    ${people},
     ${quote},
     ${richText},
     ${river},
+    ${splashBanner},
     ${stats},
     ${tabs},
     ${timeline},

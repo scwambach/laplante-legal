@@ -34,12 +34,13 @@
 
   --small-size: #{$size-14};
 
-  --color-primary: #{$blue};
-  --color-primary-light: #{$lightBlue};
-  --color-primary-dark: #{darken($blue, 10%)};
-  --color-secondary: #{$green};
-  --color-secondary-light: #{$lightGreen};
-  --color-secondary-dark: #{darken($green, 10%)};
+  --color-primary: #{$green};
+  --color-primary-light: #{$lightGreen};
+  --color-primary-dark: #{$darkGreen};
+  --color-primary-bright: #{$brightGreen};
+  --color-secondary: #{$blue};
+  --color-secondary-light: #{$lightBlue};
+  --color-secondary-dark: #{darken($blue, 10%)};
   --color-tertiary: #{$orange};
   --color-tertiary-light: #{$lightOrange};
   --color-tertiary-dark: #{darken($orange, 35%)};
@@ -52,8 +53,8 @@
   --color-gray: #{$gray};
   --color-gray-light: #{$lightGray};
 
-  --overlay-primary: #{rgba($blue, 0.8)};
-  --overlay-secondary: #{rgba($green, 0.8)};
+  --overlay-primary: #{rgba($green, 0.8)};
+  --overlay-secondary: #{rgba($blue, 0.8)};
   --overlay-tertiary: #{rgba($orange, 0.8)};
   --overlay-quaternary: #{rgba($red, 0.8)};
   --overlay-white: #{rgba($white, 0.8)};
@@ -66,7 +67,7 @@
   --color-warning: #{$warning};
   --color-info: #{$info};
 
-  --color-link: #{$blue};
+  --color-link: #{$green};
 
   --line-height-single: #{$line-height-single};
   --line-height-base: #{$line-height-base};
@@ -76,17 +77,17 @@
   --vertical-spacing: #{$vertical-spacing};
   --vertical-spacing-mobile: #{$vertical-spacing-mobile};
 
-  --header-spacing: #{$vertical-spacing / 2};
+  --header-spacing: #{$vertical-spacing / 4};
   --header-spacing-mobile: #{$vertical-spacing-mobile / 2};
 
-  --footer-spacing: #{$vertical-spacing / 3};
+  --footer-spacing: #{$vertical-spacing};
   --footer-spacing-mobile: #{$vertical-spacing-mobile / 3};
 
   --section-heading-spacing: #{$vertical-spacing / 1.5};
   --section-heading-spacing-mobile: #{$vertical-spacing-mobile / 1.5};
 
-  --font-body: 'Roboto', sans-serif;
-  --font-heading: 'Georgia', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Amiri', sans-serif;
 
   --heading-one-size: #{$size-48};
   --heading-two-size: #{$size-40};

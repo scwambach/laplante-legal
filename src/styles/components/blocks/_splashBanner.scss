@@ -1,0 +1,61 @@
+.splashBanner {
+  .inner {
+    height: 100%;
+  }
+
+  .content {
+    padding: $size-200 $size-80 $size-200 0;
+    width: 50%;
+    .inner {
+      max-width: $xs - 50px;
+    }
+  }
+
+  h1 {
+    font-size: $size-60;
+    color: var(--color-primary);
+  }
+
+  h2 {
+    font-size: $size-36;
+    color: var(--color-primary-bright);
+    font-style: italic;
+    margin-bottom: $size-72;
+  }
+
+  .image-box {
+    width: 50%;
+    position: relative;
+  }
+
+  .content {
+    padding-left: var(--container-padding);
+
+    strong {
+      color: var(--color-primary-bright);
+      font-size: $size-12;
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding: 0;
+      margin: $size-16 0 0;
+      list-style: none;
+      font-size: $size-16;
+      display: flex;
+      flex-direction: column;
+      gap: $size-12;
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+
+  .contentFooter {
+    border-top: $size-1 solid var(--color-black);
+    margin-top: $size-72;
+    font-size: $size-14;
+    padding-top: $size-32;
+  }
+}

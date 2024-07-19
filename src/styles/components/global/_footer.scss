@@ -1,10 +1,19 @@
 .footer {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
   text-align: center;
   padding: var(--footer-spacing) 0;
 
   @media screen and (max-width: ($md - 1)) {
     padding: var(--footer-spacing-mobile) 0;
+  }
+
+  strong {
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  a {
+    color: var(--color-black);
   }
 }

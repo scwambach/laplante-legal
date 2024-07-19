@@ -1,21 +1,24 @@
 'use client'
-import { useState } from 'react'
-import { signIn, signOut, useSession } from 'next-auth/react'
+// import { useState } from 'react'
 import { GlobalProps } from '@utils/types'
 import { Box, Container, Flex, Heading } from '@components/utility'
-import { Avatar, Button, Dropdown, LinkObject } from '@components/modules'
+import {
+  // Button, Dropdown,
+  LinkObject,
+} from '@components/modules'
 
 // deploy
 
 export const Header = ({
-  menu,
+  // menu,
   title,
+  phone,
 }: {
   menu: GlobalProps['navigation']
   title: GlobalProps['siteTitle']
+  phone: GlobalProps['phone']
 }) => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const { data: session } = useSession()
+  // const [menuOpen, setMenuOpen] = useState(false)
   return (
     <Box elementTag="header" className="header">
       <Container>
@@ -32,13 +35,19 @@ export const Header = ({
               {title}
             </LinkObject>
           </Heading>
+          <Box className="contact">
+            <Flex elementTag="p" gap="xxs" alignItems="center">
+              <em>contact:</em>
+              <LinkObject href={`tel:${phone}`}>{phone}</LinkObject>
+            </Flex>
+          </Box>
 
-          <Flex
+          {/* <Flex
             elementTag="ul"
             alignItems="center"
             className={`unstyled mainNav${menuOpen ? ' open' : ''} `}
           >
-            {menu.map((item) => (
+            {menu?.map((item) => (
               <li key={item.href}>
                 {item.subNav ? (
                   <Dropdown
@@ -57,27 +66,6 @@ export const Header = ({
               </li>
             ))}
           </Flex>
-          {session ? (
-            <>
-              {session.user && session.user.name && (
-                <Avatar
-                  firstName={session.user?.name.split(' ')[0]}
-                  lastName={session.user?.name.split(' ')[1]}
-                  image={{
-                    src: session.user?.image as string,
-                    alt: session.user?.name as string,
-                  }}
-                />
-              )}
-              <Button onClick={() => signOut()} type="button">
-                Sign Out
-              </Button>
-            </>
-          ) : (
-            <Button onClick={() => signIn()} type="button">
-              Sign In
-            </Button>
-          )}
           <Button
             unstyled
             type="button"
@@ -91,6 +79,7 @@ export const Header = ({
               <span>Toggle Menu</span>
             </Box>
           </Button>
+          */}
         </Flex>
       </Container>
     </Box>

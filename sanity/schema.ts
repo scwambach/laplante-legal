@@ -2,8 +2,11 @@ import { type SchemaTypeDefinition } from 'sanity'
 // docTypes
 import { event } from './docTypes/event'
 import { globalSettings } from './docTypes/globalSettings'
+import { navigation } from './docTypes/navigation'
 import { page } from './docTypes/page'
 import { person } from './docTypes/person'
+import { post } from './docTypes/post'
+import { tag } from './docTypes/tag'
 // modules
 import { button } from './modules/button'
 import { card } from './modules/card'
@@ -31,13 +34,11 @@ import { people } from './components/people'
 import { quote } from './components/quote'
 import { richText } from './components/richText'
 import { river } from './components/river'
+import { splashBanner } from './components/splashBanner'
 import { stats } from './components/stats'
 import { tabs } from './components/tabs'
 import { timeline } from './components/timeline'
 import { videos } from './components/videos'
-import { navigation } from './docTypes/navigation'
-import { post } from './docTypes/post'
-import { tag } from './docTypes/tag'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -76,6 +77,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     quote,
     richText,
     river,
+    splashBanner,
     stats,
     tabs,
     timeline,

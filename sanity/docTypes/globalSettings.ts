@@ -43,6 +43,43 @@ export const globalSettings = {
       },
     },
     {
+      name: 'phone',
+      title: 'Phone',
+      type: 'string',
+    },
+    {
+      name: 'fax',
+      title: 'Fax',
+      type: 'string',
+    },
+    {
+      name: 'location',
+      title: 'Location',
+      type: 'object',
+      fields: [
+        {
+          name: 'address',
+          title: 'Address',
+          type: 'string',
+        },
+        {
+          name: 'city',
+          title: 'City',
+          type: 'string',
+        },
+        {
+          name: 'state',
+          title: 'State',
+          type: 'string',
+        },
+        {
+          name: 'zip',
+          title: 'Zip',
+          type: 'string',
+        },
+      ],
+    },
+    {
       name: 'socials',
       title: 'Socials',
       type: 'array',

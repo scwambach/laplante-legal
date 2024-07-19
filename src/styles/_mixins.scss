@@ -32,7 +32,6 @@
 
   &:hover {
     @media screen and (min-width: ($sm)) {
-      opacity: 0.8;
       text-decoration: underline;
     }
   }

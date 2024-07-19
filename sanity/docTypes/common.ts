@@ -142,6 +142,7 @@ export const pageComponents = [
   { type: 'quote' },
   { type: 'richText' },
   { type: 'river' },
+  { type: 'splashBanner' },
   { type: 'stats' },
   { type: 'tabs' },
   { type: 'timeline' },

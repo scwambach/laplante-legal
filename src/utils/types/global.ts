@@ -89,6 +89,9 @@ export interface GlobalProps {
   siteTitle: string
   siteImage?: ImageObjectProps
   logo?: ImageObjectProps
+  phone?: string
+  fax?: string
+  location?: AddressProps
   footerCopy?: string
   navigation: NavProps[]
 }

@@ -15,12 +15,16 @@ export const PageLayout = ({
   return (
     <main className={pageClasses}>
       <SkipToMain />
-      <Header menu={global.navigation} title={global.siteTitle} />
+      <Header
+        menu={global.navigation}
+        title={global.siteTitle}
+        phone={global.phone}
+      />
       <div id="bodyContent" tabIndex={-1}>
         {children}
       </div>
 
-      <Footer title={global.siteTitle} copy={global.footerCopy} />
+      <Footer {...global} />
     </main>
   )
 }
