@@ -11,23 +11,28 @@ export const Footer = ({ location, phone, fax }: GlobalProps) => {
   return (
     <Box elementTag="footer" className="footer">
       <Container>
-        <Flex justifyContent="space-between" alignItems="center">
-          <Flex elementTag="p" gap="micro">
-            <strong>Location:</strong>
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          fill
+          className="inner"
+        >
+          <p>
+            <strong>Location: </strong>
             <LinkObject href={`https://www.google.com/maps/search/${address}`}>
               {address}
             </LinkObject>
-          </Flex>
-          <Flex gap="micro" direction="column">
-            <Flex elementTag="p" gap="micro">
-              <strong>Phone:</strong>
+          </p>
+          <div>
+            <p>
+              <strong>Phone: </strong>
               <LinkObject href={`tel:${phone}`}>{phone}</LinkObject>
-            </Flex>
-            <Flex elementTag="p" gap="micro">
-              <strong>Fax:</strong>
+            </p>
+            <p>
+              <strong>Fax: </strong>
               <LinkObject href={`tel:${fax}`}>{fax}</LinkObject>
-            </Flex>
-          </Flex>
+            </p>
+          </div>
         </Flex>
       </Container>
     </Box>

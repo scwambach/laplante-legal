@@ -24,8 +24,9 @@ export const Header = ({
       <Container>
         <Flex
           ariaLabel="Main Navigation"
-          columnBreak="none"
+          columnBreak="sm"
           role="navigation"
+          gap="none"
           elementTag="nav"
           alignItems="center"
           justifyContent="space-between"
@@ -36,7 +37,12 @@ export const Header = ({
             </LinkObject>
           </Heading>
           <Box className="contact">
-            <Flex elementTag="p" gap="xxs" alignItems="center">
+            <Flex
+              elementTag="p"
+              gap="xxs"
+              alignItems="center"
+              columnBreak="none"
+            >
               <em>contact:</em>
               <LinkObject href={`tel:${phone}`}>{phone}</LinkObject>
             </Flex>

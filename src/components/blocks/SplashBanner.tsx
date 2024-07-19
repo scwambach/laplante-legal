@@ -31,7 +31,17 @@ export const SplashBanner = ({
       elementTag="section"
       style={style}
     >
-      <Flex fill alignItems="stretch" gap="none" className="inner">
+      <Flex
+        fill
+        alignItems="stretch"
+        direction="row-reverse"
+        gap="none"
+        className="inner"
+        columnBreak="lg"
+      >
+        <Box className="image-box">
+          <ImageObject {...foregroundMedia} isBackground />
+        </Box>
         <Flex
           justifyContent="center"
           alignItems="flex-end"
@@ -74,9 +84,6 @@ export const SplashBanner = ({
             )}
           </Box>
         </Flex>
-        <Box className="image-box">
-          <ImageObject {...foregroundMedia} isBackground />
-        </Box>
       </Flex>
     </Box>
   )

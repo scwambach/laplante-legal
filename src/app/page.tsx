@@ -32,9 +32,7 @@ export async function generateMetadata() {
   const description = pageData.description || globalData.siteDescription
 
   return {
-    title: pageData.title
-      ? `${pageData.title} | ${globalData.siteTitle}`
-      : globalData.siteTitle,
+    title: globalData.siteTitle,
     description,
     openGraph: ogImage?.src
       ? {

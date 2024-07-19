@@ -15,14 +15,14 @@
   --container-narrower: #{$md};
 
   --gap-micro: #{$size-4};
-  --gap-xxs: #{$size-16};
-  --gap-xs: #{$size-20};
-  --gap-sm: #{$size-32};
-  --gap-md: #{$size-40};
-  --gap-lg: #{$size-52};
-  --gap-xl: #{$size-72};
-  --gap-xxl: #{$size-84};
-  --gap-mega: #{$size-120};
+  --gap-xxs: #{$size-8};
+  --gap-xs: #{$size-16};
+  --gap-sm: #{$size-24};
+  --gap-md: #{$size-32};
+  --gap-lg: #{$size-40};
+  --gap-xl: #{$size-52};
+  --gap-xxl: #{$size-72};
+  --gap-mega: #{$size-84};
 
   --container-padding: #{$size-32};
 
@@ -80,7 +80,7 @@
   --header-spacing: #{$vertical-spacing / 4};
   --header-spacing-mobile: #{$vertical-spacing-mobile / 2};
 
-  --footer-spacing: #{$vertical-spacing};
+  --footer-spacing: #{$vertical-spacing / 1.5};
   --footer-spacing-mobile: #{$vertical-spacing-mobile / 3};
 
   --section-heading-spacing: #{$vertical-spacing / 1.5};
