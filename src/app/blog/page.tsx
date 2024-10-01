@@ -4,10 +4,15 @@ import { BLOG_ROLL_QUERY } from 'queries/blogRoll'
 import { GLOBAL_QUERY } from 'queries/global'
 import { BlogRollProps, GlobalProps } from '@utils/types'
 import { Banner, Cards } from '@components/blocks'
+import { notFound } from 'next/navigation'
 
 async function getData() {
   const globalData = await client.fetch(GLOBAL_QUERY)
   const blogData = await client.fetch(BLOG_ROLL_QUERY)
+
+  if (blogData.posts.length < 1) {
+    return notFound()
+  }
 
   return { globalData, blogData }
 }
