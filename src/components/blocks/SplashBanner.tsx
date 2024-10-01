@@ -1,9 +1,10 @@
 import { Button, ImageObject } from '@components/modules'
 import { Box, Flex, Heading, Portable } from '@components/utility'
-import { BannerProps } from '@utils/types'
+import { BannerProps, ImageObjectProps } from '@utils/types'
 
 interface SplashBannerProps extends BannerProps {
   contentFooter?: string | any[]
+  secondaryLogo?: ImageObjectProps
 }
 
 export const SplashBanner = ({
@@ -14,6 +15,7 @@ export const SplashBanner = ({
   componentId,
   foregroundMedia,
   heading,
+  secondaryLogo,
   headingLevel = 2,
   links,
   markdown,
@@ -41,6 +43,7 @@ export const SplashBanner = ({
       >
         <Box className="image-box">
           <ImageObject {...foregroundMedia} isBackground />
+          {secondaryLogo && <ImageObject {...secondaryLogo} className="logo" />}
         </Box>
         <Flex
           justifyContent="center"

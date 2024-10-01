@@ -35,7 +35,7 @@ tags[]->{
 },
 authors[]->{
   ...,
-  ${imageQuery('image ')},
+  ${imageQuery('image')},
 },
 ${imageQuery('image ')},
 "href": "/blog/" + slug.current,`

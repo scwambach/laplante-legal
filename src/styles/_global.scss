@@ -1,8 +1,10 @@
 html {
   background-color: var(--color-white);
+  overflow-x: hidden;
 
   main {
     background-color: var(--color-offwhite);
+    overflow-x: hidden;
   }
 }
 

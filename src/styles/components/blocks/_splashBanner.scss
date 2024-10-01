@@ -1,6 +1,16 @@
 .splashBanner {
+  position: relative;
   .inner {
     height: 100%;
+  }
+
+  .logo {
+    position: absolute;
+    bottom: -$size-52;
+    right: -$size-152;
+    z-index: 1;
+    width: $xs;
+    height: $xs;
   }
 
   .content {

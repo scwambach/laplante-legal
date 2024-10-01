@@ -1,3 +1,5 @@
+import { imageQuery } from './common'
+
 export const GLOBAL_QUERY = `*[_type == "globalSettings"][0] {
   "siteTitle": title,
   "siteDescription": description,
@@ -5,6 +7,7 @@ export const GLOBAL_QUERY = `*[_type == "globalSettings"][0] {
   "favicon": favicon.asset->url,
   socials,
   phone,
+  ${imageQuery('logo')},
   fax,
   location {
     "street": address,

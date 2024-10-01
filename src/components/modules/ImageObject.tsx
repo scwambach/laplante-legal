@@ -14,20 +14,16 @@ export const ImageObject = ({
   testId,
   width,
 }: ImageObjectProps) => {
-  const imageSrc = query
-    ? `https://source.unsplash.com/random/${width}x${height}?${query}`
-    : src ||
-      `https://fakeimg.pl/${height && width ? `${width}x${height}` : '600x400'}?text=url+is+broken&font=bebas`
   return (
-    <div
+    <span
       id={componentId}
       data-testid={testId}
       className={`imageObject${className ? ` ${className}` : ''}`}
       data-label={`${isBackground ? 'background' : 'image'}-container`}
     >
-      {imageSrc && (
+      {src && (
         <Image
-          src={`${imageSrc}`}
+          src={`${src}`}
           alt={`${alt}`}
           fill={isBackground}
           sizes={sizes}
@@ -41,6 +37,6 @@ export const ImageObject = ({
           }
         />
       )}
-    </div>
+    </span>
   )
 }

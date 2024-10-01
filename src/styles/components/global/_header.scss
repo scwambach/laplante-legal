@@ -22,6 +22,12 @@
     padding: var(--header-spacing-mobile) 0;
   }
 
+  .logo {
+    img {
+      width: 300px;
+    }
+  }
+
   a {
     color: var(--color-offwhite);
     font-size: $size-32;

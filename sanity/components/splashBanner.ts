@@ -106,12 +106,13 @@ export const splashBanner = {
       heading: 'heading',
       subheading: 'subheading',
       backgroundImage: 'backgroundImage',
+      foregroundImage: 'foregroundMedia',
     },
     prepare(selection: any) {
       return {
-        title: selection.heading || selection.subheading,
-        subtitle: 'Splash Banner',
-        media: Bomb || selection.backgroundImage,
+        title: selection.heading || 'Splash Banner',
+        subtitle: selection.heading ? 'Splash Banner' : undefined,
+        media: selection.backgroundImage || selection.foregroundImage || Bomb,
       }
     },
   },

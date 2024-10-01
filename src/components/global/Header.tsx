@@ -3,6 +3,7 @@
 import { GlobalProps } from '@utils/types'
 import { Box, Container, Flex, Heading } from '@components/utility'
 import {
+  ImageObject,
   // Button, Dropdown,
   LinkObject,
 } from '@components/modules'
@@ -11,9 +12,11 @@ import {
 
 export const Header = ({
   // menu,
+  logo,
   title,
   phone,
 }: {
+  logo: GlobalProps['logo']
   menu: GlobalProps['navigation']
   title: GlobalProps['siteTitle']
   phone: GlobalProps['phone']
@@ -21,7 +24,7 @@ export const Header = ({
   // const [menuOpen, setMenuOpen] = useState(false)
   return (
     <Box elementTag="header" className="header">
-      <Container>
+      <Container containerClass="narrow">
         <Flex
           ariaLabel="Main Navigation"
           columnBreak="sm"
@@ -32,8 +35,8 @@ export const Header = ({
           justifyContent="space-between"
         >
           <Heading level={1} nonHeadingElement="p">
-            <LinkObject href="/" ariaLabel={title}>
-              {title}
+            <LinkObject href="/" ariaLabel={title} className="logo">
+              {logo ? <ImageObject {...logo} alt={title} /> : title}
             </LinkObject>
           </Heading>
           <Box className="contact">

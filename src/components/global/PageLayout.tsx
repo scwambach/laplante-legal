@@ -19,6 +19,7 @@ export const PageLayout = ({
         menu={global.navigation}
         title={global.siteTitle}
         phone={global.phone}
+        logo={global.logo}
       />
       <div id="bodyContent" tabIndex={-1}>
         {children}
