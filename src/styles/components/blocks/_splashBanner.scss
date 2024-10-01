@@ -11,6 +11,13 @@
     z-index: 1;
     width: $xs;
     height: $xs;
+
+    @media screen and (max-width: ($sm - 1)) {
+      bottom: -$size-24;
+      right: -$size-72;
+      width: $micro;
+      height: $micro;
+    }
   }
 
   .content {
