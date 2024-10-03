@@ -36,7 +36,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.4",
     "markdown-it": "^14.1.0",
-    "next": "14.2.4",
+    "next": "^14.2.14",
     "next-sanity": "^9.4.2",
     "nodemailer": "^6.9.14",
     "react": "18.3.1",

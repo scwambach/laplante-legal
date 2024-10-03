@@ -87,7 +87,6 @@ export interface GlobalProps {
   favicon: string
   siteDescription: string
   siteTitle: string
-  siteImage?: ImageObjectProps
   logo?: ImageObjectProps
   phone?: string
   fax?: string

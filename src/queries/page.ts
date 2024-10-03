@@ -18,12 +18,11 @@ import { splashBanner } from './blocks/splashBanner'
 import { stats } from './blocks/stats'
 import { tabs } from './blocks/tabs'
 import { timeline } from './blocks/timeline'
-import { imageQuery } from './common'
 
 export const PAGE_QUERY = `*[_type == "page" && slug.current == $slug][0] {
   ...,
   "slug": slug.current,
-  ${imageQuery('ogImage')},
+  ogImage,
   pageComponents[] {
     _type,
     _key,

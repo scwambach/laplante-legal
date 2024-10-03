@@ -28,10 +28,12 @@ export const Footer = ({ location, phone, fax }: GlobalProps) => {
               <strong>Phone: </strong>
               <LinkObject href={`tel:${phone}`}>{phone}</LinkObject>
             </p>
-            <p>
-              <strong>Fax: </strong>
-              <LinkObject href={`tel:${fax}`}>{fax}</LinkObject>
-            </p>
+            {fax && (
+              <p>
+                <strong>Fax: </strong>
+                <LinkObject href={`tel:${fax}`}>{fax}</LinkObject>
+              </p>
+            )}
           </div>
         </Flex>
       </Container>

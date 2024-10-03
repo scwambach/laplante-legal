@@ -2,6 +2,7 @@ import { PageLayout } from '@components/global/PageLayout'
 import { BlockFactory } from '@components/utility/BlockFactory'
 import { client, previewClient } from '@utils/client'
 import { GlobalProps, PageProps } from '@utils/types'
+import { urlFor } from '@utils/urlFor'
 import { notFound } from 'next/navigation'
 import { GLOBAL_QUERY } from 'queries/global'
 import { PAGE_QUERY } from 'queries/page'
@@ -28,15 +29,17 @@ export async function generateMetadata() {
     pageData,
   }: { globalData: GlobalProps; pageData: PageProps } = await getData('home')
 
-  const ogImage = pageData.ogImage ? pageData.ogImage : globalData.siteImage
+  const ogImage = pageData.ogImage
+    ? urlFor(pageData.ogImage).width(1200).height(630).url()
+    : undefined
   const description = pageData.description || globalData.siteDescription
 
   return {
     title: globalData.siteTitle,
     description,
-    openGraph: ogImage?.src
+    openGraph: ogImage
       ? {
-          images: [ogImage.src],
+          images: [ogImage],
         }
       : undefined,
     icons: {
