@@ -23,11 +23,6 @@ export async function generateMetadata({}) {
   return {
     title: `Blog | ${globalData.siteTitle}`,
     description: globalData.siteDescription,
-    openGraph: globalData.siteImage
-      ? {
-          images: [globalData.siteImage?.src || ''],
-        }
-      : undefined,
     icons: {
       icon: '/favicon.svg',
     },

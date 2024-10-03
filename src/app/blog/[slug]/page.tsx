@@ -7,6 +7,7 @@ import { GlobalProps, PostDetailsProps } from '@utils/types'
 import { Banner, Cards } from '@components/blocks'
 import { TableOfContents, ShareButtons } from '@components/modules'
 import { Container, Spacer, Flex, Portable } from '@components/utility'
+import { urlFor } from '@utils/urlFor'
 
 async function getData(slug: string, preview?: boolean) {
   const sanityClient = preview ? previewClient : client
@@ -39,15 +40,17 @@ export async function generateMetadata({
     preview === process.env.PREVIEW_TOKEN
   )
 
-  const ogImage = postData.ogImage ? postData.ogImage : globalData.siteImage
+  const ogImage = postData.ogImage
+    ? urlFor(postData.ogImage).width(1200).height(630).url()
+    : undefined
   const description = postData.description || globalData.siteDescription
 
   return {
     title: `${postData.title} | Blog | ${globalData.siteTitle}`,
     description,
-    openGraph: ogImage?.src
+    openGraph: ogImage
       ? {
-          images: [ogImage.src],
+          images: [ogImage],
         }
       : undefined,
     icons: {
